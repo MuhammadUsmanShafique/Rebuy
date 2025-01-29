@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccount">
+
+
+
+
+<!--Top Section -->
+    <LinearLayout
+        android:id="@+id/top_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:gravity="center_vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/user_image"
+            android:background="@drawable/user_image_background"
+            android:padding="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alice Eve"
+                android:textColor="@color/red"
+                android:textSize="32sp"
+                android:textStyle="bold"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alice.eve@gmail.com"
+                android:textSize="14sp"
+                android:textColor="#979797"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"
+            android:layout_marginStart="10dp"
+            />
+
+
+    </LinearLayout>
+
+<TextView
+    android:id="@+id/myaccount_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/top_sec"
+    android:text="My account"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:textColor="@color/HeadingGray"
+    android:textSize="24sp"
+    android:layout_marginStart="35dp"
+    android:layout_marginTop="35dp"
+    android:textStyle="bold"
+    />
+
+<!-- Main Sec-->
+    <LinearLayout
+        android:id="@+id/main_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/myaccount_text"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+<!--Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_for_myaccount"
+                >
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Alice Eve"
+                    android:textColor="#656565"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:background="@null"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:inputType="none"
+                />
+
+
+                <ImageView
+                    android:id="@+id/name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_icon"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <!--Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_for_myaccount"
+                >
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="alice.eve@gmail.com"
+                    android:textColor="#656565"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    />
+                <ImageView
+                    android:id="@+id/email_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_icon"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <!--Phone-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_for_myaccount"
+                >
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="+1 561-230-0033"
+                    android:textColor="#656565"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    />
+                <ImageView
+                    android:id="@+id/phone_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_icon"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <!--Address-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_for_myaccount"
+                >
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Alice Eve\n2074, Half and Half Drive\nHialeah, Florida - 33012\nPh: +1 561-230-0033"
+                    android:textColor="#656565"
+                    android:textSize="18sp"
+                    android:gravity="start"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    />
+                <ImageView
+                    android:id="@+id/address_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_icon"
+                    android:layout_gravity="bottom"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Settings"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/main_sec"
+    android:background="@drawable/feedback_btn_background"
+    android:layout_marginStart="35dp"
+    android:layout_marginTop="10dp"
+    android:paddingStart="35dp"
+    android:paddingEnd="35dp"
+    android:textColor="#3C3C3C"
+    android:textSize="18sp"
+    android:textAllCaps="false"
+    android:drawableStart="@drawable/setting_icon"
+    android:drawablePadding="6dp"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

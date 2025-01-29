@@ -23,7 +23,7 @@ class SplashScreen : AppCompatActivity() {
         }
 
         fun navigateToMainActivity() {
-            val intent = Intent(this@SplashScreen, Sidebar::class.java)
+            val intent = Intent(this@SplashScreen, MyAccount::class.java)
             startActivity(intent)
             finish()
         }
