@@ -16,5 +16,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frag_container,Home_Frag())
+        transaction.commit()
+
+
+
     }
 }

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="220dp"
+        android:layout_height="144dp"
+        android:src="@drawable/product_thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/make_favourite_icon"
+        android:layout_alignBottom="@id/image"
+        android:layout_alignRight="@id/image"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        android:background="@drawable/background_for_home"
+        android:padding="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batman Toy"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018 | "
+        android:textSize="14sp"
+        android:textColor="@color/pink"
+        />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FunSkool"
+        android:textSize="14sp"
+        android:textColor="@color/pink"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 899"
+        android:textSize="24sp"
+        android:textColor="@color/HeadingGray"
+        android:textStyle="bold"
+        />
+
+
+
+
+</LinearLayout>

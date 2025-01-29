@@ -23,9 +23,10 @@ class SplashScreen : AppCompatActivity() {
         }
 
         fun navigateToMainActivity() {
-            val intent = Intent(this@SplashScreen, MyAccount::class.java)
+            val intent = Intent(this@SplashScreen, MainActivity::class.java)
             startActivity(intent)
             finish()
+
         }
 
      CoroutineScope(Dispatchers.Main).launch{

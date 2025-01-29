@@ -28,6 +28,7 @@
             android:gravity="start"
             />
         <ImageView
+            android:id="@+id/close_sidebar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/close"
@@ -254,6 +255,7 @@
 
         />
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_out_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign out"

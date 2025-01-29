@@ -1,5 +1,6 @@
 package app.rebuy
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
@@ -27,6 +28,7 @@ class MyAccount : AppCompatActivity() {
         val emailEdit = findViewById<ImageView>(R.id.email_edit)
         val phoneEdit = findViewById<ImageView>(R.id.phone_edit)
         val addressEdit = findViewById<ImageView>(R.id.address_edit)
+        val closeAccountSetting = findViewById<ImageView>(R.id.close_account_setting)
 
 fun makeEditable(editText:EditText){
     val isEditable = editText.isFocusable
@@ -56,6 +58,10 @@ makeEditable(name)
         }
         addressEdit.setOnClickListener{
             makeEditable(address)
+        }
+        closeAccountSetting.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+
         }
 
 
