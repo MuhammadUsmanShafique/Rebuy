@@ -57,19 +57,24 @@ openSidebar.setOnClickListener{
 
 
  val recyclerView = view.findViewById<RecyclerView>(R.id.new_arrivals_list)
+ val recentlyViewedRececylerView = view.findViewById<RecyclerView>(R.id.recently_viewed)
+val oldViewedRecyclerView = view.findViewById<RecyclerView>(R.id.old_viewed_rec)
  recyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false,)
-
+ oldViewedRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false,)
+recentlyViewedRececylerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
 
         val list = listOf(
-            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "The Great Gatsby", 1925, "Fiction", 10),
-            New_Arrivals_Item_Model(R.drawable.setting_icon, "Moby Dick", 1851, "Adventure", 15),
-            New_Arrivals_Item_Model(R.drawable.setting_icon, "1984", 1949, "Dystopian", 12),
-            New_Arrivals_Item_Model(R.drawable.setting_icon, "Hamlet", 1603, "Drama", 20)
+            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Batman Toy", 2018, "Funskool", 899),
+            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Moby Dick", 1851, "Adventure", 15),
+            New_Arrivals_Item_Model(R.drawable.product_thumbnail_two, "1984", 1949, "Dystopian", 12),
+            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Hamlet", 1603, "Drama", 20)
         )
 
 
 val adapter =CustomRecyclerViewAdapter(list)
 recyclerView.adapter = adapter
+recentlyViewedRececylerView.adapter = adapter
+oldViewedRecyclerView.adapter = adapter
 
     }
 

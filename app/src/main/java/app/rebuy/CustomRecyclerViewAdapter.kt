@@ -31,9 +31,9 @@ class CustomRecyclerViewAdapter(private val list: List<New_Arrivals_Item_Model>)
 
         holder.image.setImageResource(item.Image)
         holder.title.text = item.title
-        holder.year.text = item.year.toString()
+        holder.year.text = "${item.year} | "
         holder.category.text = item.category.toString()
-        holder.price.text = item.price.toString()
+        holder.price.text = "₹ ${item.price}"
     }
 
     // Returns the total number of items

@@ -31,7 +31,8 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/user_image_background"
                 android:padding="5dp"
-                android:src="@drawable/user_image" />
+                android:src="@drawable/user_image"
+                />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/nav_to_my_account"
@@ -115,6 +116,7 @@
 
     </LinearLayout>
 
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -138,7 +140,7 @@
         android:layout_height="wrap_content"
         android:text="view more"
         android:layout_weight="1"
-        android:textAlignment="textEnd"
+        android:textAlignment="center"
         android:textSize="14sp"
         android:textColor="#898989"
         />
@@ -151,5 +153,102 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/new_arrivals_item_layout"
+        android:layout_marginStart="35dp"
         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="35dp"
+        android:paddingEnd="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently Viewed"
+            android:layout_weight="1"
+            android:textColor="@color/HeadingGray"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view more"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="#898989"
+            />
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recently_viewed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/new_arrivals_item_layout"
+        android:layout_marginStart="35dp"
+        />
+
+
+
+
+    <!-- -->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="35dp"
+        android:paddingEnd="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Viewed"
+            android:layout_weight="1"
+            android:textColor="@color/HeadingGray"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view more"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="#898989"
+            />
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/old_viewed_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/new_arrivals_item_layout"
+        android:layout_marginStart="35dp"
+        />
+
+
+
+
+
+
+
+
+
+
 </LinearLayout>

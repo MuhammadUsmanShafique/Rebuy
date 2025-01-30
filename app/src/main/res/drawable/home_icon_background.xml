@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="60dp" android:height="60dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/b_nav_icon1"
+        android:gravity="center"/>
+</layer-list>
