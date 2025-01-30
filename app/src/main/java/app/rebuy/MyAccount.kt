@@ -60,7 +60,7 @@ makeEditable(name)
             makeEditable(address)
         }
         closeAccountSetting.setOnClickListener{
-            startActivity(Intent(this,MainActivity::class.java))
+finish()
 
         }
 

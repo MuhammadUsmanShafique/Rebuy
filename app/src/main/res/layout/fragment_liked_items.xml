@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LikedItemsFrag">
+
+
+    <!--Top Section -->
+    <LinearLayout
+        android:id="@+id/top_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button"
+            android:layout_gravity="start"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liked Items"
+            android:textColor="@color/HeadingGray"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hamburger"
+            />
+    </LinearLayout>
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/liked_rec"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="35dp"
+    android:layout_marginEnd="35dp"
+/>
+
+</LinearLayout>

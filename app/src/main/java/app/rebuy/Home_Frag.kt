@@ -1,6 +1,7 @@
 package app.rebuy
 
 import CustomRecyclerViewAdapter
+import MainAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -56,13 +57,8 @@ openSidebar.setOnClickListener{
 }
 
 
- val recyclerView = view.findViewById<RecyclerView>(R.id.new_arrivals_list)
- val recentlyViewedRececylerView = view.findViewById<RecyclerView>(R.id.recently_viewed)
-val oldViewedRecyclerView = view.findViewById<RecyclerView>(R.id.old_viewed_rec)
- recyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false,)
- oldViewedRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false,)
-recentlyViewedRececylerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-
+val recyclerView = view.findViewById<RecyclerView>(R.id.parent_rec)
+ recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val list = listOf(
             New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Batman Toy", 2018, "Funskool", 899),
             New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Moby Dick", 1851, "Adventure", 15),
@@ -71,10 +67,22 @@ recentlyViewedRececylerView.layoutManager = LinearLayoutManager(requireContext()
         )
 
 
-val adapter =CustomRecyclerViewAdapter(list)
-recyclerView.adapter = adapter
-recentlyViewedRececylerView.adapter = adapter
-oldViewedRecyclerView.adapter = adapter
+        val sectionList = listOf(
+            DataItem(
+                "New Arrivals",list
+            ),
+            DataItem(
+                "Recently Viewed",list
+            ),
+            DataItem("Old Viewed",list)
+        )
+
+
+        val adapter = MainAdapter(sectionList)
+        recyclerView.adapter = adapter
+
+
+
 
     }
 

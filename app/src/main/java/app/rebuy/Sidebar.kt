@@ -24,7 +24,7 @@ class Sidebar : AppCompatActivity() {
             startActivity(Intent(this,Login::class.java))
         }
         closeSidebar.setOnClickListener{
-            startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
 
 

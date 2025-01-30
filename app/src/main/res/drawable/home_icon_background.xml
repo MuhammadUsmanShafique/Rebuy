@@ -1,11 +1,15 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="rectangle">
-            <size android:width="60dp" android:height="60dp"/>
-        </shape>
+<!-- res/drawable/icon_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#ffffff"/> <!-- Background color for the selected state -->
+                    <size android:width="24dp" android:height="24dp"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/b_nav_icon1" android:gravity="center"/>
+        </layer-list>
     </item>
-
-    <item
-        android:drawable="@drawable/b_nav_icon1"
-        android:gravity="center"/>
-</layer-list>
+    <item android:drawable="@drawable/b_nav_icon1"/>
+</selector>

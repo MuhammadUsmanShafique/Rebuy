@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frag_container,Home_Frag())
+        transaction.replace(R.id.frag_container,LikedItemsFrag())
         transaction.commit()
 
 
