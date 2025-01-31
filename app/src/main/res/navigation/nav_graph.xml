@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sidebarFrag">
+
+    <fragment
+        android:id="@+id/sidebarFrag"
+        android:name="app.rebuy.SidebarFrag"
+        android:label="Sidebar Fragment">
+        <action
+            android:id="@+id/action_sidebarFrag_to_myOrders"
+            app:destination="@id/myOrdersFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myOrdersFrag"
+        android:name="app.rebuy.MyOrdersFrag"
+        android:label="My Orders">
+        <action
+            android:id="@+id/action_myOrders_to_sidebarFrag"
+            app:destination="@id/sidebarFrag" />
+    </fragment>
+
+</navigation>

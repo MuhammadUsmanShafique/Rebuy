@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sidebar">
+
+    <LinearLayout
+        android:id="@+id/top_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ReBuy"
+            android:textColor="@color/HeadingGray"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="start"
+            />
+        <ImageView
+            android:id="@+id/close_sidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"
+            android:layout_gravity="start"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/sections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/top_sec"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        >
+
+
+        <!-- My Accounts -->
+        <LinearLayout
+            android:id="@+id/myaccounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/soft_mist_background"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/my_account"
+                android:layout_marginRight="30dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Account"
+                    android:textColor="#5F5F5F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="edit your details , account seeting"
+                    android:textSize="13sp"
+                    android:textColor="#5F5F5F"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!--My orders -->
+        <LinearLayout
+            android:id="@+id/myorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/soft_mist_background"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/orders"
+                android:layout_marginRight="30dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Orders"
+                    android:textColor="#5F5F5F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="view all your orders"
+                    android:textSize="13sp"
+                    android:textColor="#5F5F5F"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!--My Listings -->
+        <LinearLayout
+            android:id="@+id/mylistings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/soft_mist_background"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/listings"
+                android:layout_marginRight="30dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Listings"
+                    android:textColor="#5F5F5F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="view your product listing for sale"
+                    android:textSize="13sp"
+                    android:textColor="#5F5F5F"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Liked Items -->
+        <LinearLayout
+            android:id="@+id/liked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/soft_mist_background"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                android:layout_marginRight="30dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liked Items"
+                    android:textColor="#5F5F5F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="see the products you have wishlisted"
+                    android:textSize="13sp"
+                    android:textColor="#5F5F5F"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttons_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bg"
+        app:layout_constraintTop_toBottomOf="@id/sections"
+        android:layout_marginTop="50dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="feedback"
+            android:background="@drawable/feedback_btn_background"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/HeadingGray"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_out_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign out"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:background="@drawable/sign_out_btn_background"
+            android:textColor="@color/TextWhite"
+            android:textAllCaps="false"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/waves"
+        app:layout_constraintTop_toBottomOf="@+id/buttons_sec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

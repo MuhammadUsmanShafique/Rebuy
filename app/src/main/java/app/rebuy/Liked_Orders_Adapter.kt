@@ -4,12 +4,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import app.rebuy.New_Arrivals_Item_Model
 import app.rebuy.R
 import app.rebuy.liked_order_listings_model
 
 class SecondAdapter(
-    private val list: List<liked_order_listings_model>
+    private val list: List<liked_order_listings_model>,
+    private val isMyOrder:Boolean ? = null
 ) :
     RecyclerView.Adapter<SecondAdapter.ViewHolder>() {
 
@@ -19,11 +19,13 @@ class SecondAdapter(
         val title: TextView = itemView.findViewById(R.id.title)
         val date: TextView = itemView.findViewById(R.id.date)
         val price: TextView = itemView.findViewById(R.id.price)
+        val heartImage : ImageView = itemView.findViewById(R.id.heart_image)
+        val rateNow : TextView = itemView.findViewById(R.id.rate_noew_text)
     }
 
     // onCreateViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_for_liked_order_listings_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_for_liked_my_orders_items, parent, false)
         return ViewHolder(view)
     }
 
@@ -35,6 +37,16 @@ class SecondAdapter(
         holder.title.text = item.title
         holder.date.text = item.data
         holder.price.text = "₹ ${item.price}"
+        if(isMyOrder==null ){
+            holder.rateNow.visibility = View.GONE
+        }
+        else
+        {
+
+            holder.heartImage.visibility = View.GONE
+        }
+
+
     }
 
     // Returns the total number of items

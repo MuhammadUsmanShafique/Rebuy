@@ -62,6 +62,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/heart_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/fileed_heart"
@@ -69,6 +70,20 @@
         android:background="@drawable/filled_heart_background"
         android:padding="4dp"
         />
+    <TextView
+        android:id="@+id/rate_noew_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate now"
+        android:layout_gravity="bottom"
+        android:background="@drawable/sign_out_btn_background"
+        android:textColor="#EDEDED"
+        android:textSize="15sp"
+        android:padding="6dp"
+        android:textStyle="bold"
+        />
+
+
 
 </LinearLayout>
 
