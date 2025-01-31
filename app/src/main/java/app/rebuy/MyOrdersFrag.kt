@@ -45,7 +45,7 @@ class MyOrdersFrag: Fragment() {
 
         val navController = requireActivity().findNavController(R.id.sidebar_fragment_container)
         back.setOnClickListener {
-navController.navigate(R.id.action_myOrders_to_sidebarFrag)
+           requireActivity().finish()
         }
         navToSidebar.setOnClickListener{
             navController.navigate(R.id.action_myOrders_to_sidebarFrag)
