@@ -21,7 +21,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
+
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+
+        val reqFromSidebarForLikedItems = intent.getBooleanExtra("navToLikedItemsFrag",false)
+
+
 
         // Function to load fragments
         fun loadFragment(fragment: Fragment) {
@@ -47,5 +54,16 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+
+
+
+        if(reqFromSidebarForLikedItems){
+            bottomNavigationView.selectedItemId = R.id.liked_items
+        }
+
+
+
+
     }
 }

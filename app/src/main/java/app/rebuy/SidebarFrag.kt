@@ -21,6 +21,8 @@ class SidebarFrag : Fragment() {
         val view = inflater.inflate(R.layout.fragment_sidebar, container, false)
 
         val navToMyOrders = view.findViewById<LinearLayout>(R.id.myorder)
+        val navToMyAccount = view.findViewById<LinearLayout>(R.id.myaccounts)
+        val navToLikedItems = view.findViewById<LinearLayout>(R.id.liked)
         val closeSidebar = view.findViewById<ImageView>(R.id.close_sidebar)
         val signOutBtn = view.findViewById<AppCompatButton>(R.id.sign_out_btn)
         val navController = requireActivity().findNavController(R.id.sidebar_fragment_container)
@@ -35,6 +37,15 @@ class SidebarFrag : Fragment() {
         navToMyOrders.setOnClickListener {
             navController.navigate(R.id.action_sidebarFrag_to_myOrders)
 
+        }
+        navToMyAccount.setOnClickListener{
+            startActivity(Intent(requireContext(), MyAccount::class.java,))
+        }
+        navToLikedItems.setOnClickListener{
+
+     val intent = Intent(requireContext(),MainActivity::class.java)
+            intent.putExtra("navToLikedItemsFrag",true)
+            startActivity(intent)
         }
 
         return view
