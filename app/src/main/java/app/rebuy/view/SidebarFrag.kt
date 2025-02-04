@@ -1,4 +1,4 @@
-package app.rebuy
+package app.rebuy.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatButton
 import androidx.navigation.findNavController
+import app.rebuy.R
 
 class SidebarFrag : Fragment() {
 
@@ -43,7 +44,7 @@ class SidebarFrag : Fragment() {
         }
         navToLikedItems.setOnClickListener{
 
-     val intent = Intent(requireContext(),MainActivity::class.java)
+     val intent = Intent(requireContext(), MainActivity::class.java)
             intent.putExtra("navToLikedItemsFrag",true)
             startActivity(intent)
         }

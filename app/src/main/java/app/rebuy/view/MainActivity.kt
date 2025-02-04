@@ -1,4 +1,4 @@
-package app.rebuy
+package app.rebuy.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import app.rebuy.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

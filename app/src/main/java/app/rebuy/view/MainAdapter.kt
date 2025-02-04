@@ -1,10 +1,12 @@
+package app.rebuy.view
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import app.rebuy.DataItem
+import app.rebuy.model.data.DataItem
 import app.rebuy.R
 
 class MainAdapter (val section :List<DataItem>):RecyclerView.Adapter<MainAdapter.SectionViewHolder>()

@@ -1,7 +1,5 @@
-package app.rebuy
+package app.rebuy.view
 
-import CustomRecyclerViewAdapter
-import MainAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +9,16 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.core.widget.ImageViewCompat
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import app.rebuy.R
+import app.rebuy.viewmodel.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class Home_Frag : Fragment() {
 
     override fun onCreateView(
@@ -39,7 +43,6 @@ navToMyAccount.setOnClickListener{
 
 // showing cursor on which anywhere inside the linear layout
 searchSec.setOnClickListener{
-    val isEditable = searchText.isFocusable
         searchText.isFocusable = true
         searchText.isFocusableInTouchMode = true
         searchText.isCursorVisible = true
@@ -59,27 +62,26 @@ openSidebar.setOnClickListener{
 
 val recyclerView = view.findViewById<RecyclerView>(R.id.parent_rec)
  recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val list = listOf(
-            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Batman Toy", 2018, "Funskool", 899),
-            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Moby Dick", 1851, "Adventure", 15),
-            New_Arrivals_Item_Model(R.drawable.product_thumbnail_two, "1984", 1949, "Dystopian", 12),
-            New_Arrivals_Item_Model(R.drawable.product_thumbnail, "Hamlet", 1603, "Drama", 20)
-        )
 
+     val homeViewModel: HomeViewModel by viewModels()
 
-        val sectionList = listOf(
-            DataItem(
-                "New Arrivals",list
-            ),
-            DataItem(
-                "Recently Viewed",list
-            ),
-            DataItem("Old Viewed",list)
-        )
-
-
-        val adapter = MainAdapter(sectionList)
+        homeViewModel.loadData()
+homeViewModel.getAllSectionsData.observe(viewLifecycleOwner,
+    { allSectionsData->
+        val adapter = MainAdapter(allSectionsData)
         recyclerView.adapter = adapter
+
+    }
+)
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/sidebarFrag"
-        android:name="app.rebuy.SidebarFrag"
+        android:name="app.rebuy.view.SidebarFrag"
         android:label="Sidebar Fragment">
         <action
             android:id="@+id/action_sidebarFrag_to_myOrders"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/myOrdersFrag"
-        android:name="app.rebuy.MyOrdersFrag"
+        android:name="app.rebuy.view.MyOrdersFrag"
         android:label="My Orders">
         <action
             android:id="@+id/action_myOrders_to_sidebarFrag"

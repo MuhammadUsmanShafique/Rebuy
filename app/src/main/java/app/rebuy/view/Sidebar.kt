@@ -1,41 +1,24 @@
-package app.rebuy
+package app.rebuy.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import app.rebuy.R
 
-class SplashScreen : AppCompatActivity() {
+class Sidebar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(R.layout.activity_sidebar)
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        fun navigateToMainActivity() {
-            val intent = Intent(this@SplashScreen, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-
-        }
-
-     CoroutineScope(Dispatchers.Main).launch{
-         delay(2000)
-         navigateToMainActivity()
-     }
-
-
-
 
     }
 }

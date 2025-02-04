@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -33,8 +35,21 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+
+
+
 }
 
+kapt {
+    correctErrorTypes = true
+}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -48,6 +63,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // HILT
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
+    // LiveData and ViewModel (lifecycle components)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+
 
 
 
@@ -69,12 +92,6 @@ dependencies {
 
     // JSON serialization library, works with the Kotlin serialization plugin
     implementation(libs.kotlinx.serialization.json)
-
-
-
-
-
-
 
 
 

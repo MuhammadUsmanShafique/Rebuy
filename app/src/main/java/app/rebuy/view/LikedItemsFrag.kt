@@ -1,4 +1,4 @@
-package app.rebuy
+package app.rebuy.view
 
 import SecondAdapter
 import android.content.Intent
@@ -8,12 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import app.rebuy.R
+import app.rebuy.model.data.liked_order_listings_model
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MyOrdersFrag: Fragment() {
+class LikedItemsFrag : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class MyOrdersFrag: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_my_orders, container, false)
+        val view = inflater.inflate(R.layout.fragment_liked_items, container, false)
 
         // Create the list of liked items
         val list = listOf(
@@ -40,15 +41,16 @@ class MyOrdersFrag: Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // Set the adapter to RecyclerView
-        val adapter = SecondAdapter(list,true)
+        val adapter = SecondAdapter(list)
         recyclerView.adapter = adapter
 
-        val navController = requireActivity().findNavController(R.id.sidebar_fragment_container)
+
         back.setOnClickListener {
-           requireActivity().finish()
+            val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+            bottomNavigationView.selectedItemId = R.id.home
         }
         navToSidebar.setOnClickListener{
-            navController.navigate(R.id.action_myOrders_to_sidebarFrag)
+            startActivity(Intent(requireContext(), Sidebar::class.java))
         }
 
 

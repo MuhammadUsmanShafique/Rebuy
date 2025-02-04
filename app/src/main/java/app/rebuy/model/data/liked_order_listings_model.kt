@@ -1,5 +1,5 @@
-package app.rebuy
-import android.provider.ContactsContract.RawContacts.Data
+package app.rebuy.model.data
+
 data class liked_order_listings_model(
     val image:Int,
     val title:String,
