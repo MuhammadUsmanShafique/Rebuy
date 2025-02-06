@@ -11,7 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val homeRepository:HomeRepository,) :ViewModel() {
+class HomeViewModel @Inject constructor(private val homeRepository:HomeRepository) :ViewModel() {
 
     private val _allSectionsData = MutableLiveData<List<DataItem>>()
     val getAllSectionsData : LiveData<List<DataItem>>

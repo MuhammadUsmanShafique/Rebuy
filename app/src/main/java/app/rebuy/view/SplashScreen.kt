@@ -24,7 +24,7 @@ class SplashScreen : AppCompatActivity() {
         }
 
         fun navigateToMainActivity() {
-            val intent = Intent(this@SplashScreen, MainActivity::class.java)
+            val intent = Intent(this@SplashScreen, TestScreenForApi::class.java)
             startActivity(intent)
             finish()
 
